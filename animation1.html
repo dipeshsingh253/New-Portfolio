@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+    <style>
+         .slide-in {
+  animation: slide-in 1.75s ease;
+} 
+
+.slide-out {
+  animation: slide-out 1.75s ease;
+}
+
+@keyframes slide-out {
+  0% {
+    transform: translate(-120%);
+  }
+  25% {
+    transform: translate(-120%) scale(0.8);
+  }
+  75% {
+    transform: scale(0.8);
+    transition-timing-function: ease-out;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes slide-in {
+  25% {
+    transform: scale(0.8);
+  }
+  75% {
+    transform: translate(120%) scale(0.8);
+    transition-timing-function: ease-out;
+  }
+  100% {
+    transform: translate(120%) scale(1);
+  }
+}
+
+.slide-in , .slide-out{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 1px solid purple;
+  
+} 
+    </style>
+</head>
+<body>
+    
+    <div class="slide-out">
+        <header>
+            <nav>
+    
+    
+                <h1>
+                    <span>D</span><span>ipesh</span>
+                    <span>S</span><span>ingh</span>
+                </h1>
+                <div class="menu">
+    
+                    <a href="#" class="is-active">Home</a>
+                    <a href="#">About Me</a>
+                    <a href="#">Tech Stack</a>
+                    <a href="#">Skills</a>
+                    <a href="#">Projects </a>
+                    <a href="#">Contact</a>
+    
+                </div>
+    
+                <button class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+    
+    
+    
+            </nav>
+            <div class="mobile-menu">
+    
+                <a href="#" class="is-active">Home</a>
+                <a href="#">About Me</a>
+                <a href="#">Tech Stack</a>
+                <a href="#">Skills</a>
+                <a href="#">Projects </a>
+                <a href="#">Contact</a>
+    
+            </div>
+        </header>
+    </div>
+<div class="slide-in">
+    <header>
+        <nav>
+
+
+            <h1>
+                <span>D</span><span>ipesh</span>
+                <span>S</span><span>ingh</span>
+            </h1>
+            <div class="menu">
+
+                <a href="#" class="is-active">Home</a>
+                <a href="#">About Me</a>
+                <a href="#">Tech Stack</a>
+                <a href="#">Skills</a>
+                <a href="#">Projects </a>
+                <a href="#">Contact</a>
+
+            </div>
+
+            <button class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+
+
+        </nav>
+        <div class="mobile-menu">
+
+            <a href="#" class="is-active">Home</a>
+            <a href="#">About Me</a>
+            <a href="#">Tech Stack</a>
+            <a href="#">Skills</a>
+            <a href="#">Projects </a>
+            <a href="#">Contact</a>
+
+        </div>
+    </header>
+</div>
+
+</body>
+</html>
