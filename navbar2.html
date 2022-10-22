@@ -147,6 +147,11 @@
             background-color: #000;
             color: #FFF;
             transition: 0.3s;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            
         }
 
         .mobile-menu.is-open {
@@ -154,20 +159,30 @@
             transform: translateY(0);
         }
 
-
-        .mobile-menu a {
+        .mobile-menu a.is-active,
+        .mobile-menu a:hover {
+            background-color: var(--primary);
+        }
+        .mobile-menu a{
             display: block;
-            padding: 1rem;
-            color: #FFF;
+            
+            color: white;
+            margin: 5px 16px;
+            font-weight: 600;
+            width: 30%;
+            text-decoration: none;
+            transition: 0.4s;
+            padding: 10px 16px;
+            border-radius: 99px;
+           
             text-align: center;
             text-decoration: none;
-            font-size: 1.25rem;
             transition: 0.3s;
+
         }
 
         .mobile-menu a:hover {
-            color: var(--primary);
-            background-color: #FFF;
+            background-color: var(--primary);
         }
 
         @media (min-width:768px) {
@@ -210,7 +225,7 @@
         </nav>
         <div class="mobile-menu">
 
-            <a href="#" class="">Home</a>
+            <a href="#" class="is-active">Home</a>
             <a href="#">About Me</a>
             <a href="#">Tech Stack</a>
             <a href="#">Skills</a>
@@ -229,6 +244,7 @@
     hamburger.addEventListener("click", function () {
         this.classList.toggle("is-active");
         mobile_menu.classList.toggle("is-open");
+        console.log(mobile_menu.classList);
     })
 
 </script>
