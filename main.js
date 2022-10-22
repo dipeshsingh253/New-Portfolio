@@ -10,8 +10,13 @@ const projects = document.querySelector(".projects");
 const contact = document.querySelector(".contact");
 
 const home_mobile = document.querySelector(".mobile-menu .home");
+const about_me_mobile = document.querySelector(".mobile-menu .about-me");
+const tech_mobile = document.querySelector(".mobile-menu .tech-stack");
+const skills_mobile = document.querySelector(".mobile-menu .skills");
+const projects_mobile = document.querySelector(".mobile-menu .projects");
+const contact_mobile = document.querySelector(".mobile-menu .contact");
 
-home_mobile.addEventListener("click",()=>{console.log("Heelo")});
+//home_mobile.addEventListener("click",()=>{console.log("Heelo")});
 
 const home_id = document.querySelector("#home");
 const about_me_id = document.querySelector("#about-me");
@@ -28,12 +33,91 @@ hamburger.addEventListener("click", function () {
     console.log(mobile_menu.classList);
 })
 
+about_me_mobile.addEventListener("click", () => {
+    about_me_mobile.classList.toggle("is-active");
+
+    if (about_me_id.classList.contains("non-vis")) {
+        about_me_id.classList.toggle("non-vis");
+    }
+
+    about_me_id.classList.toggle("vis");
+
+    if (home_mobile.classList.contains("is-active")) {
+        home_mobile.classList.toggle("is-active");
+    }
+
+    if (tech_mobile.classList.contains("is-active")) {
+        tech_mobile.classList.toggle("is-active");
+    }
+
+    if (skills_mobile.classList.contains("is-active")) {
+        skills_mobile.classList.toggle("is-active");
+    }
+
+    if (projects_mobile.classList.contains("is-active")) {
+        projects_mobile.classList.toggle("is-active");
+    }
+
+    if (contact_mobile.classList.contains("is-active")) {
+        contact_mobile.classList.toggle("is-active");
+    }
+
+
+    if (home_id.classList.contains("vis")) {
+        home_id.classList.toggle("vis");
+    }
+
+    if (tech_id.classList.contains("vis")) {
+        tech_id.classList.toggle("vis");
+    }
+
+    if (skills_id.classList.contains("vis")) {
+        skills_id.classList.toggle("vis");
+    }
+
+    if (projects_id.classList.contains("vis")) {
+        projects_id.classList.toggle("vis");
+    }
+
+    if (contact_id.classList.contains("vis")) {
+        contact_id.classList.toggle("vis");
+    }
+
+    hamburger.classList.toggle("is-active");
+    mobile_menu.classList.toggle("is-open");
+    print();
+});
 
 
 home.addEventListener("click", () => {
-    console.log(home_id.classList);
+
+   homeClick();
+
+});
+
+about_me.addEventListener("click", () => {
+    aboutMeClick();
+});
+
+tech.addEventListener("click", () => {
+   techStackClick();
+});
+
+skills.addEventListener("click", () => {
+   skillsClick();
+});
+
+projects.addEventListener("click", () => {
+    projectsClick();
+});
+
+contact.addEventListener("click", () => {
+    contactClick();
+});
 
 
+
+function homeClick(){
     home.classList.toggle("is-active");
 
     if (home_id.classList.contains("non-vis")) {
@@ -83,10 +167,9 @@ home.addEventListener("click", () => {
     }
 
     print();
+}
 
-});
-
-about_me.addEventListener("click", () => {
+function aboutMeClick(){
     about_me.classList.toggle("is-active");
 
     if (about_me_id.classList.contains("non-vis")) {
@@ -137,9 +220,9 @@ about_me.addEventListener("click", () => {
     }
 
     print();
-});
+}
 
-tech.addEventListener("click", () => {
+function techStackClick(){
     tech.classList.toggle("is-active");
 
     if (tech_id.classList.contains("non-vis")) {
@@ -189,9 +272,9 @@ tech.addEventListener("click", () => {
         contact_id.classList.toggle("vis");
     }
     print();
-});
+}
 
-skills.addEventListener("click", () => {
+function skillsClick(){
     skills.classList.toggle("is-active");
 
     if (skills_id.classList.contains("non-vis")) {
@@ -241,9 +324,9 @@ skills.addEventListener("click", () => {
         contact_id.classList.toggle("vis");
     }
     print();
-});
+}
 
-projects.addEventListener("click", () => {
+function projectsClick(){
     projects.classList.toggle("is-active");
 
     if (projects_id.classList.contains("non-vis")) {
@@ -293,9 +376,9 @@ projects.addEventListener("click", () => {
         contact_id.classList.toggle("vis");
     }
     print();
-});
+}
 
-contact.addEventListener("click", () => {
+function contactClick(){
     contact.classList.toggle("is-active");
 
 
@@ -345,7 +428,8 @@ contact.addEventListener("click", () => {
         about_me_id.classList.toggle("vis");
     }
     print();
-});
+}
+
 
 
 function print() {

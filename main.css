@@ -67,7 +67,7 @@ main div {
     width: 100%;
     height: 100%;
 
-    z-index: 98;
+    z-index: 97;
     padding-top: 6rem;
 
     background-color: #000;
@@ -226,8 +226,9 @@ main div {
     display: flex;
 }
 
-
-
+#home{
+    display: flex;
+}
 
 @media (min-width:768px) {
 
