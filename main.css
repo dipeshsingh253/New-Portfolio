@@ -54,7 +54,7 @@ nav {
 
 }
 
-main div {
+main > div {
     display: none;
     flex-direction: column;
     justify-content: center;
@@ -83,6 +83,17 @@ main div {
 .vis {
     display: flex !important;
 }
+
+.fadeout{
+    animation: fadingout 8s forwards;
+
+}
+
+.fadein{
+    animation: fadingin 10s forwards;
+
+}
+
 
 
 .hamburger {
@@ -228,6 +239,128 @@ main div {
 
 #home{
     display: flex;
+    color: #FFF;
+}
+
+.container{
+    display: none;
+}
+
+.intro-box{
+    display: block;
+}
+
+.container h1{
+    text-transform: none;
+    font-size: 40px;
+    font-weight: 500;
+}
+
+.container h1:nth-child(2){
+    color: var(--primary);
+}
+
+
+
+.intro-box {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-top: 100px;
+}
+
+.intro-box h1:nth-child(1) {
+    color: var(--light);
+    font-weight: 800;
+    font-size: 20px;
+    margin: 0 0 0 35%;
+    text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 170px;
+    animation: type 2s steps(40, end) forwards;
+    /* border: 1px solid red; */
+}
+
+.intro-box h1:nth-child(2) {
+    opacity: 0;
+    margin: 0 auto auto auto;
+    background: linear-gradient(to right, var(--primary), var(--primary), var(--primary));
+    font-weight: 800;
+    font-size: 100px;
+    width: 430px;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    overflow: hidden;
+    animation: shring-animation 2.2s steps(40, end) 2s forwards, blink .5s step-end infinite alternate;
+}
+
+@keyframes shring-animation {
+    0% {
+        background-position: 0 0;
+        opacity: 0;
+        width: 0;
+    }
+
+    1% {
+        background-position: 0 0;
+        opacity: 1;
+        border-right: 1px solid var(--primary);
+    }
+
+    50% {
+        background-position: 150px 0;
+        opacity: 1;
+        border-right: 1px solid var(--primary);
+    }
+
+    100% {
+        background-position: 400px 0;
+        opacity: 1;
+        border-right: 1px solid var(--primary);
+    }
+}
+
+@keyframes type {
+    0% {
+        width: 0;
+    }
+
+    1%,
+    99% {
+        border-right: 1px solid var(--primary);
+    }
+
+    100% {
+        width: 320px;
+        border-right: none;
+
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+@keyframes fadingout{
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+@keyframes fadingin{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
 }
 
 @media (min-width:768px) {
@@ -243,5 +376,15 @@ main div {
 
     #home {
         display: flex;
+    }
+
+
+    .container h1{
+        font-size: 60px;
+        font-weight: 500;
+    }
+
+    .container span{
+        display: inline;
     }
 }

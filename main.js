@@ -79,6 +79,7 @@ contact.addEventListener("click", () => {
 //Standard Menu Methods
 
 function homeClick() {
+    window.location.reload();
     home.classList.toggle("is-active");
 
     if (home_id.classList.contains("non-vis")) {
@@ -395,6 +396,7 @@ function contactClick() {
 //Mobile Menu Methods 
 
 function homeClickMobile() {
+    window.location.reload();
     home_mobile.classList.toggle("is-active");
 
     if (home_id.classList.contains("non-vis")) {
@@ -735,3 +737,21 @@ function print() {
     console.log(contact_id.classList);
     console.log(about_me_id.classList);
 }
+
+function showAutoTyping() {
+    // document.querySelector(".intro-box").classList.add("fade");
+    document.querySelector(".intro-box").style.display = "none";
+
+    document.querySelector(".container").style.display = "inline";
+}
+
+// function shuffleAutos(){
+//     setTimeout(showAutoTyping(),2000);
+// }
+
+
+setTimeout(() => {
+    showAutoTyping();
+}, 5000);
+
+
