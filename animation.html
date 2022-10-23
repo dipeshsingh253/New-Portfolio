@@ -9,7 +9,147 @@
     <link rel="stylesheet" href="main.css">
     <style>
 
+#content-about {
+      width: 80%;
+      height: 80%;
+      display: flex;
+      /* background-color: red; */
+    }
 
+    .profile {
+      width: 80%;
+      /* background: crimson; */
+      display: flex;
+      margin: 0 auto; 
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .profile h1{
+        font-size: 1em;
+        color: #8c38ff;
+    }
+
+    .profile h1 span{
+        color: #fff;
+    }
+    .profile div:first-child {
+      width: 100%;
+      height: 50%;
+      /* background: brown; */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .profile div:nth-child(2) {
+      width: 100%;
+      height: 50%;
+      /* background: cyan; */
+      display: flex;
+      flex-direction: column;
+      align-items: baseline;
+      margin-left: 30px;
+      gap: 10px;
+      justify-content: center;
+      color: purple;
+    }
+
+    img {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+    }
+
+
+    .content-data {
+      height: 100%;
+      /* background: orange; */
+      display: none;
+      margin: auto;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      color: white;
+      margin-left: 5%;
+      gap: 30px;
+
+    }
+
+    .content-data h1{
+      font-size: 1.1rem;
+      color: #9733EE;
+    }
+
+    .content-data p{
+      font-size: 1.1rem;
+    }
+    .content-data div:nth-child(1) {
+      padding-top: 5%;
+      /* width: 95%;
+      height: 30%; */
+      /* background-color: orangered; */
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      justify-content: center;
+    }
+
+    .content-data div:nth-child(2) {
+      /* width: 95%;
+      height: 30%; */
+      /* background-color: orchid; */
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      justify-content: center;
+    }
+
+    .content-data div:nth-child(3) {
+      /* width: 95%;
+      height: 30%; */
+      /* background-color: lightsalmon; */
+      display: flex;
+      align-self: baseline;
+      flex-direction: column;
+      gap: 10px;
+      justify-content: center;
+    }
+
+    .content-data div:nth-child(4) {
+      /* height: 10%; */
+      /* background-color: lawngreen; */
+      display: flex;
+      align-self: baseline;
+      padding-bottom: 70px;
+      gap: 10px;
+      justify-content: right;
+      align-items: center;
+    }
+
+
+    .btn-grad {
+      width: 150px;
+      background-image: linear-gradient(to right, #DA22FF 0%, #9733EE 51%, #DA22FF 100%);
+      margin: 10px;
+      padding: 15px 45px;
+      text-align: center;
+      text-transform: uppercase;
+      transition: 0.5s;
+      background-size: 200% auto;
+      color: white;
+      box-shadow: 0 0 20px #eee;
+      border-radius: 10px;
+      display: block;
+    }
+
+    .btn-grad:hover {
+      background-position: right center;
+      /* change the direction of the change here */
+      color: #fff;
+      text-decoration: none;
+    }
 
     </style>
 </head>
@@ -71,7 +211,64 @@
            </div>
         </div>
         <div id="about-me">
-            <h1>About Me</h1>
+            <!-- <h1>About Me</h1> -->
+            <div id="content-about">
+            <div class="profile">
+                <div>
+                  <img src="https://dipeshsingh253.github.io/images/avatar.jpg" alt="">
+                </div>
+                <div>
+                  <h1>Name :<span> Dipesh Singh</span></h1>
+                  <h1>Age :<span> 19</span></h1>
+                  <h1>Languages :<span> Hindi, Gujarati, English</span></h1>
+                  <h1>Freelance :<span> Availible</span></h1>
+                  <h1>Location :<span> Gujarat, India</span></h1>
+                  <h1>Email :<span> sinhdipesh@gmail.com</span></h1>
+                  <h1>Phone :<span> +91 9265805191</span></h1>
+                </div>
+                <div>
+                    <button class="btn-grad">Resume</button>
+                  </div>
+              </div>
+              <div class="content-data">
+                <div>
+                  <h1>About Me </h1>
+                  <p>
+                    Hello! My name is Dipesh Singh & I enjoy creating things
+                    that live on the internet. I'm a passionate Developer, with
+                    strong administrative & communication skills, good attention
+                    to detail & the ability to write efficient code.
+          
+                  </p>
+                </div>
+          
+                <div>
+                  <h1>What I do </h1>
+                  <p>
+                    I'm a computer enthusiast. I love creating websites and I love to explore emerging web technologies. I'm
+                    skilled in Java Technologies like JPA, Hibernate, and Spring Tools and I'm trained in SQL. I've built some
+                    cool projects. Do check them out. Apart from coding, I love reading books, listening to music, and playing
+                    video games. I love talking about creative coding and crazy ideas.
+                  </p>
+                </div>
+          
+                <div>
+                  <h1>Hobbies and Intresest </h1>
+                  <p>
+                    Opens Source and Technologies
+                  </p>
+                  <p>
+                    Science and Physics
+                  </p>
+                  <p>
+                    Animes & Sci-fi movies
+                  </p>
+                </div>
+                <div>
+                  <button class="btn-grad">Resume</button>
+                </div>
+              </div>
+            </div>
         </div>
         <div id="tech-stack">
             <h1>Tech Stack</h1>
@@ -87,7 +284,7 @@
         </div>
     </main>
 
-
+<!-- 
     <div class="navigation-buttons">
         <span>
             <h1>&lt;</h1>
@@ -95,7 +292,7 @@
         <span>
             <h1>&gt;</h1>
         </span>
-    </div>
+    </div> -->
 </body>
 
 <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>

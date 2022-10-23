@@ -387,4 +387,8 @@ main > div {
     .container span{
         display: inline;
     }
+
+    .content-data{
+        display: flex;
+    }
 }
